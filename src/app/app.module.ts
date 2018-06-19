@@ -19,6 +19,8 @@ import { RolemasterComponent } from './rolemaster/rolemaster.component';
 import { DepartmentmasterComponent } from './departmentmaster/departmentmaster.component';
 import { DesignationmasterComponent } from './designationmaster/designationmaster.component';
 import { EducationmasterComponent } from './educationmaster/educationmaster.component';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import { EducationmasterComponent } from './educationmaster/educationmaster.comp
     RolemasterComponent,
     DepartmentmasterComponent,
     DesignationmasterComponent,
-    EducationmasterComponent
+    EducationmasterComponent,
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -49,3 +53,5 @@ import { EducationmasterComponent } from './educationmaster/educationmaster.comp
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+

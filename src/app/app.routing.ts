@@ -3,6 +3,8 @@ import { CommonModule, } from '@angular/common';
 import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UsermasterComponent } from './usermaster/usermaster.component';
 import { CitymasterComponent } from './citymaster/citymaster.component';
@@ -15,6 +17,9 @@ import { DesignationmasterComponent } from './designationmaster/designationmaste
 import { EducationmasterComponent } from './educationmaster/educationmaster.component';
 
 const routes: Routes =[
+    { path: 'login',      component: LoginComponent },  
+    { path: 'home',      component: HomeComponent,
+    children: [ 
     { path: 'dashboard',      component: DashboardComponent },
     { path: 'usermaster',      component: UsermasterComponent },
     { path: 'citymaster',      component: CitymasterComponent },
@@ -25,8 +30,8 @@ const routes: Routes =[
     { path: 'departmentmaster',      component: DepartmentmasterComponent },
     { path: 'designationmaster',      component: DesignationmasterComponent },
     { path: 'educationmaster',      component: EducationmasterComponent },
-    { path: '**',redirectTo: 'dashboard', pathMatch: 'full' }
-
+    ]},
+    { path: '**',redirectTo: 'login', pathMatch: 'full' }
 ];
 
 @NgModule({
