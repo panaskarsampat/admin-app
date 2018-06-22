@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { APP_BASE_HREF } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
@@ -42,6 +43,7 @@ import { HomeComponent } from './home/home.component';
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     NavbarModule,
     FooterModule,
@@ -49,9 +51,13 @@ import { HomeComponent } from './home/home.component';
     RouterModule,
     AppRoutingModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [
+    { provide: APP_BASE_HREF, useValue: '/' },
+  ],
 })
-export class AppModule { }
+export class AppModule { 
+
+}
 
 
